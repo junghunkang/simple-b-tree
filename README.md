@@ -4,8 +4,6 @@
 
 ## Specification
 
-![스크린샷 2021-06-28 오후 12.47.28](/image/스크린샷 2021-06-28 오후 12.47.28.png)
-
 * Single Binary File에 B+-tree 형태의 자료를 저장한다.
 * 각각의 노드는 하나의 블락 단위로 이루어져 있다.
 * 파일의 맨 앞 12 바이트는 해더로 사용 [ Block Size, Root BID, Depth ]
@@ -14,8 +12,6 @@
 * 블락의 물리 주소는 12 + ( ( BID-1 ) * BlockSize )
 * Non-Leaf Node Entry: <Key, NextLevelBID> (8 byte)
 * Leaf Node Entry: <Key, Value> (8 byte)
-
-![스크린샷 2021-06-28 오후 12.46.32](/image/스크린샷 2021-06-28 오후 12.46.32.png)
 
 * Operation: command
 	* creation: **bptree.exe c [bptree binary file] [block_size]**
